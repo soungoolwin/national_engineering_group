@@ -48,7 +48,7 @@ body {
 }
 
 .heading_container h2 span {
-    color: #da7426;
+    color: #007acc;
 }
 
 .heading_container.heading_center {
@@ -87,7 +87,7 @@ a:focus {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    background-image: url(../img/hero-bg.jpg);
+    background-image: url(../img/hero-section.jpg);
     background-size: cover;
 }
 
@@ -100,7 +100,6 @@ a:focus {
 }
 
 .header_section {
-    border-top: 15px solid #da7426;
 }
 
 .header_section .header_top {
@@ -164,7 +163,7 @@ a:focus {
 }
 
 .header_section .header_top .contact_nav a:hover i {
-    background-color: #da7426;
+    background-color: #007acc;
 }
 
 .header_section .header_top .social_box {
@@ -192,7 +191,7 @@ a:focus {
 }
 
 .header_section .header_top .social_box a:hover i {
-    background-color: #da7426;
+    background-color: #007acc;
 }
 
 .header_section .header_bottom {
@@ -212,7 +211,7 @@ a:focus {
 }
 
 .navbar-brand span {
-    color: #da7426;
+    color: #007acc;
 }
 
 .navbar-brand:hover {
@@ -247,7 +246,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link {
-    color: #da7426;
+    color: #007acc;
 }
 
 .custom_nav-container .nav_search-btn {
@@ -259,7 +258,7 @@ a:focus {
 }
 
 .custom_nav-container .nav_search-btn:hover {
-    color: #da7426;
+    color: #007acc;
 }
 
 .custom_nav-container .navbar-toggler {
@@ -388,7 +387,7 @@ a:focus {
 }
 
 .slider_section .detail-box {
-    color: #da7426;
+    color: #007acc;
 }
 
 .slider_section .detail-box h1 {
@@ -437,17 +436,17 @@ a:focus {
 .slider_section .detail-box .btn-box .btn2 {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #da7426;
+    background-color: #007acc;
     color: #ffffff;
     border-radius: 0;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    border: 1px solid #da7426;
+    border: 1px solid #007acc;
 }
 
 .slider_section .detail-box .btn-box .btn2:hover {
     background-color: transparent;
-    color: #da7426;
+    color: #007acc;
 }
 
 .slider_section .img-box img {
@@ -486,7 +485,7 @@ a:focus {
 }
 
 .slider_section .carousel_btn-box a:hover {
-    background-color: #da7426;
+    background-color: #007acc;
     color: #ffffff;
 }
 
@@ -523,18 +522,18 @@ a:focus {
 .about_section .detail-box a {
     display: inline-block;
     padding: 10px 35px;
-    background-color: #da7426;
+    background-color: #007acc;
     color: #ffffff;
     border-radius: 0px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    border: 1px solid #da7426;
+    border: 1px solid #007acc;
     margin-top: 15px;
 }
 
 .about_section .detail-box a:hover {
     background-color: transparent;
-    color: #da7426;
+    color: #007acc;
 }
 
 .portfolio_section {
@@ -621,12 +620,12 @@ a:focus {
 
 .portfolio_section .box .img-box .btn_overlay a {
     padding: 10px 45px;
-    border: 1px solid #da7426;
-    color: #da7426;
+    border: 1px solid #007acc;
+    color: #007acc;
 }
 
 .portfolio_section .box .img-box .btn_overlay a:hover {
-    background-color: #da7426;
+    background-color: #007acc;
     color: #ffffff;
 }
 
@@ -742,7 +741,7 @@ a:focus {
 }
 
 .service_section .box:hover {
-    background-color: #da7426;
+    background-color: #007acc;
     color: #ffffff;
 }
 
@@ -764,17 +763,17 @@ a:focus {
 .service_section .btn-box a {
     display: inline-block;
     padding: 10px 45px;
-    background-color: #da7426;
+    background-color: #007acc;
     color: #ffffff;
     border-radius: 0;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    border: 1px solid #da7426;
+    border: 1px solid #007acc;
 }
 
 .service_section .btn-box a:hover {
     background-color: transparent;
-    color: #da7426;
+    color: #007acc;
 }
 
 .contact_section {
@@ -840,17 +839,17 @@ a:focus {
     text-transform: uppercase;
     display: inline-block;
     padding: 12px 55px;
-    background-color: #da7426;
+    background-color: #007acc;
     color: #ffffff;
     border-radius: 0px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    border: 1px solid #da7426;
+    border: 1px solid #007acc;
 }
 
 .contact_section .form_container .btn_box button:hover {
     background-color: transparent;
-    color: #da7426;
+    color: #007acc;
 }
 
 .contact_section .map_container {
@@ -919,7 +918,7 @@ a:focus {
     width: 145px;
     min-width: 145px;
     position: relative;
-    border: 10px solid #da7426;
+    border: 10px solid #007acc;
 }
 
 .client_section .box .img-box img {
@@ -954,7 +953,7 @@ a:focus {
 }
 
 .client_section .carousel-indicators li {
-    background-color: #da7426;
+    background-color: #007acc;
     width: 20px;
     height: 20px;
     border: none;
@@ -1018,7 +1017,7 @@ a:focus {
     color: #ffffff;
     width: 30px;
     height: 30px;
-    background-color: #da7426;
+    background-color: #007acc;
     border-radius: 100%;
     margin-right: 5px;
 }
@@ -1080,7 +1079,7 @@ a:focus {
     width: 45px;
     height: 45px;
     line-height: 45px;
-    border: 1px solid #da7426;
+    border: 1px solid #007acc;
     text-align: center;
     border-radius: 5px;
     font-size: 18px;
@@ -1105,7 +1104,7 @@ a:focus {
 .info_form form button {
     width: 45px;
     height: 45px;
-    background-color: #da7426;
+    background-color: #007acc;
     color: #ffffff;
     border: none;
     outline: none;

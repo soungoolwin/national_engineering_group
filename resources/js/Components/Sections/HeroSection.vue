@@ -5,16 +5,16 @@
             <div class="header_top">
                 <div class="container-fluid header_top_container">
                     <a class="navbar-brand" href="index.html">
-                        Tro<span>Weld</span>
+                        NE<span>G</span>
                     </a>
                     <div class="contact_nav">
-                        <a href="">
+                        <a href="https://maps.app.goo.gl/YiAyu4j8v5QdMFbJ8">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <span> Location </span>
                         </a>
                         <a href="">
                             <i class="fa fa-phone" aria-hidden="true"></i>
-                            <span> Call : +01 123455678990 </span>
+                            <span> Call : +95 9761008866 </span>
                         </a>
                         <a href="">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -56,7 +56,7 @@
                             class="navbar-brand navbar_brand_mobile"
                             href="index.html"
                         >
-                            Tro<span>Weld</span>
+                            NE<span>G</span>
                         </a>
 
                         <button
@@ -123,9 +123,9 @@
                         <div class="container">
                             <div class="detail-box">
                                 <h1>
-                                    We Build <br />
-                                    The Things Architects <br />
-                                    Dream Up
+                                    We Build<br />
+                                    The Structures Of <br />
+                                    Your Dreams
                                 </h1>
                                 <div class="btn-box">
                                     <a href="" class="btn1"> Read More </a>

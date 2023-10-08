@@ -36,8 +36,8 @@ Route::middleware('auth')->group(function () {
 });
 
 //FOR HOME PAGE
-Route::get('/test', function () {
-    return Inertia::render('Test');
+Route::get('/', function () {
+    return Inertia::render('Home');
 });
 
 require __DIR__ . '/auth.php';

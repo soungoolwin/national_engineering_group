@@ -5,21 +5,19 @@
                 <div class="col-md-6">
                     <div class="detail-box">
                         <div class="heading_container">
-                            <h2>Welcome to <span>Troweld</span></h2>
+                            <h2>Welcome to <span>NEG</span></h2>
                         </div>
                         <p>
-                            Simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has been the industry's
-                            standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled
-                            it to make a type specimen book. It has s
+                            National Engineering Group ( NEG ) is established in
+                            April 1995 by a group of experienced engineers
+                            trained both locally and abroad.
                         </p>
                         <a href=""> Read More </a>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="img-box">
-                        <img src="../../../img/about-img.png" alt="" />
+                        <img src="../../../img/hero-section2.jpg" alt="" />
                     </div>
                 </div>
             </div>

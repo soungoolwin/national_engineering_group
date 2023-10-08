@@ -4,12 +4,12 @@
             <div class="container">
                 <div class="info_logo">
                     <a class="navbar-brand" href="index.html">
-                        Tro<span>Weld</span>
+                        NE<span>G</span>
                     </a>
                 </div>
                 <div class="info_main">
                     <div class="row">
-                        <div class="col-md-3 col-lg-2">
+                        <div class="col-md-4 col-lg-2">
                             <div class="info_link-box">
                                 <h5>Useful Link</h5>
                                 <ul>
@@ -54,25 +54,25 @@
                             <div class="social_box">
                                 <a href="#">
                                     <i
-                                        class="fa fa-facebook"
+                                        class="fa-brands fa-facebook"
                                         aria-hidden="true"
                                     ></i>
                                 </a>
                                 <a href="#">
                                     <i
-                                        class="fa fa-twitter"
+                                        class="fa-brands fa-twitter"
                                         aria-hidden="true"
                                     ></i>
                                 </a>
                                 <a href="#">
                                     <i
-                                        class="fa fa-linkedin"
+                                        class="fa-brands fa-linkedin"
                                         aria-hidden="true"
                                     ></i>
                                 </a>
                                 <a href="#">
                                     <i
-                                        class="fa fa-youtube-play"
+                                        class="fa-brands fa-instagram"
                                         aria-hidden="true"
                                     ></i>
                                 </a>
@@ -93,7 +93,10 @@
                             <div class="info_contact">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <a href="#" class="link-box">
+                                        <a
+                                            href="https://maps.app.goo.gl/YiAyu4j8v5QdMFbJ8"
+                                            class="link-box"
+                                        >
                                             <i
                                                 class="fa fa-map-marker"
                                                 aria-hidden="true"
@@ -107,7 +110,7 @@
                                                 class="fa fa-phone"
                                                 aria-hidden="true"
                                             ></i>
-                                            <span> Call +01 1234567890 </span>
+                                            <span> Call +95 9761008866 </span>
                                         </a>
                                     </div>
                                     <div class="col-md-4">
