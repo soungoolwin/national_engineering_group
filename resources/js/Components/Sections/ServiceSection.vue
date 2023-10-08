@@ -5,7 +5,11 @@
                 <h2>Our <span>Services</span></h2>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-4">
+                <div
+                    class="col-sm-6 col-md-4"
+                    v-for="service in services"
+                    :key="service.id"
+                >
                     <div class="box">
                         <div class="img-box">
                             <svg
@@ -24,80 +28,9 @@
                             </svg>
                         </div>
                         <div class="detail-box">
-                            <h5>EPC Project</h5>
+                            <h5>{{ service.title }}</h5>
                             <p>
-                                when looking at its layout. The point of using
-                                Lorem Ipsum is that it has a more-or-less normal
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="../../../img/s2.png" alt="" />
-                        </div>
-                        <div class="detail-box">
-                            <h5>Steel Fabrication & Erection</h5>
-                            <p>
-                                when looking at its layout. The point of using
-                                Lorem Ipsum is that it has a more-or-less normal
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="../../../img/s3.png" alt="" />
-                        </div>
-                        <div class="detail-box">
-                            <h5>Equipment Fabrication & Installation</h5>
-                            <p>
-                                when looking at its layout. The point of using
-                                Lorem Ipsum is that it has a more-or-less normal
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="../../../img/s4.png" alt="" />
-                        </div>
-                        <div class="detail-box">
-                            <h5>Tailored Machineries</h5>
-                            <p>
-                                when looking at its layout. The point of using
-                                Lorem Ipsum is that it has a more-or-less normal
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="../../../img/s5.png" alt="" />
-                        </div>
-                        <div class="detail-box">
-                            <h5>Process Piping & Industrial M&E Works</h5>
-                            <p>
-                                when looking at its layout. The point of using
-                                Lorem Ipsum is that it has a more-or-less normal
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="../../../img/s6.png" alt="" />
-                        </div>
-                        <div class="detail-box">
-                            <h5>Tanks & Vessels Fabrication & Erection</h5>
-                            <p>
-                                when looking at its layout. The point of using
-                                Lorem Ipsum is that it has a more-or-less normal
+                                {{ service.description }}
                             </p>
                         </div>
                     </div>
@@ -111,7 +44,10 @@
 </template>
 
 <script>
-export default {};
+export default {
+    props: ["services"],
+    setup() {},
+};
 </script>
 
 <style></style>

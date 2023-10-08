@@ -8,7 +8,7 @@
     <PortfolioSection></PortfolioSection>
 
     <!-- service section -->
-    <ServiceSection></ServiceSection>
+    <ServiceSection :services="services"></ServiceSection>
 
     <!-- contact section -->
     <ContactSection></ContactSection>
@@ -34,6 +34,7 @@ export default {
         AboutSection,
         HeroSection,
     },
+    props: ["services"],
 };
 </script>
 
