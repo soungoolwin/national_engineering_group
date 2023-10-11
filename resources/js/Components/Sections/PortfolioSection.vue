@@ -105,6 +105,7 @@ export default {
     widows: 70%;
     height: 70%;
     max-width: 90%;
+    margin: auto;
     height: auto;
 }
 /* CSS for the image container and overlay */

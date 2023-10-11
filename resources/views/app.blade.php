@@ -7,7 +7,8 @@
 
     <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
-
+    <!-- bootstrap core css -->
+    @vite('resources/css/bootstrap.css')
 
     <!-- fonts style -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -24,6 +25,8 @@
         referrerpolicy="no-referrer" />
 
 
+    @vite('resources/css/style.css')
+    @vite('resources/css/responsive.css')
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -39,6 +42,8 @@
     @inertia
 
 
+
+
     <!-- jQery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -47,14 +52,7 @@
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
     <!-- bootstrap js -->
-    {{-- @vite('resources/js/bootstrap-2.js') --}}
-
-    <!--  OwlCarousel 2 - Filter -->
-    <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>
-    <!-- nice select -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
-        integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
-
+    @vite('resources/js/bootstrap.js')
 
 
 </body>

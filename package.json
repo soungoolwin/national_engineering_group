@@ -19,7 +19,6 @@
     },
     "dependencies": {
         "@splidejs/vue-splide": "^0.6.12",
-        "jquery": "^3.7.1",
-        "popper.js": "^1.16.1"
+        "jquery": "^3.7.1"
     }
 }

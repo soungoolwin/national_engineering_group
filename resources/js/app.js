@@ -1,8 +1,3 @@
-import "jquery";
-import "popper.js";
-import "../css/app.css";
-import "./custom.js";
-
 import "@splidejs/vue-splide/css";
 
 import "@splidejs/vue-splide/css/skyblue";
