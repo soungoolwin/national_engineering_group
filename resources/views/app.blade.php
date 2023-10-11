@@ -24,6 +24,7 @@
         referrerpolicy="no-referrer" />
 
 
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -46,7 +47,7 @@
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
     <!-- bootstrap js -->
-    @vite('resources/js/bootstrap-2.js')
+    {{-- @vite('resources/js/bootstrap-2.js') --}}
 
     <!--  OwlCarousel 2 - Filter -->
     <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>

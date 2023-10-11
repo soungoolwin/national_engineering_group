@@ -1,6 +1,14 @@
 import "jquery";
 import "popper.js";
 import "../css/app.css";
+import "./custom.js";
+
+import "@splidejs/vue-splide/css";
+
+import "@splidejs/vue-splide/css/skyblue";
+import "@splidejs/vue-splide/css/sea-green";
+
+import "@splidejs/vue-splide/css/core";
 import { createApp, h } from "vue";
 import { createInertiaApp } from "@inertiajs/vue3";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
