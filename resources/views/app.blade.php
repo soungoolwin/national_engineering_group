@@ -7,8 +7,6 @@
 
     <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- bootstrap core css -->
-    @vite('resources/css/bootstrap.css')
 
 
     <!-- fonts style -->
@@ -22,13 +20,9 @@
     <!-- font awesome style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
 
-    <!-- Custom styles for this template -->
-    @vite('resources/css/style.css')
-
-    <!-- responsive style -->
-    @vite('resources/css/responsive.css')
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -52,15 +46,14 @@
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
     <!-- bootstrap js -->
-    @vite('resources/js/bootstrap_2.js')
+    @vite('resources/js/bootstrap-2.js')
 
     <!--  OwlCarousel 2 - Filter -->
-    {{-- <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script> --}}
+    <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>
     <!-- nice select -->
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
-        integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script> --}}
-    <!-- custom js -->
-    @vite('resources/js/custom.js')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
+        integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+
 
 
 </body>
