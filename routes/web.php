@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -39,5 +40,8 @@ Route::middleware('auth')->group(function () {
 
 //FOR HOME PAGE
 Route::get('/', [HomeController::class, 'index']);
+
+//FOR SERVICES PAGE
+Route::get('/services', [ServiceController::class, 'index']);
 
 require __DIR__ . '/auth.php';

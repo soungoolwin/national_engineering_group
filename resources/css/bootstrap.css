@@ -4335,6 +4335,9 @@ input[type="button"].btn-block {
     display: block;
     padding: 0.5rem 1rem;
 }
+.inertiaLink {
+    display: block;
+}
 
 .nav-link:hover,
 .nav-link:focus {
