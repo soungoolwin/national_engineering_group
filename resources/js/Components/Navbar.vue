@@ -74,16 +74,13 @@
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html"> About</a>
-                            </li>
-                            <li class="nav-item">
                                 <Link class="nav-link" href="/projects"
                                     >Projects</Link
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html"
-                                    >Contact Us</a
+                                <Link class="nav-link" href="/contact"
+                                    >Contact Us</Link
                                 >
                             </li>
                         </ul>

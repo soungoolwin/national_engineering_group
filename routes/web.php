@@ -8,6 +8,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+use function Termwind\render;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,4 +49,9 @@ Route::get('/services', [ServiceController::class, 'index']);
 
 //FOR PROJECTS PAGE
 Route::get('/projects', [ProjectController::class, 'index']);
+
+//FOR CONTACT PAGE
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+});
 require __DIR__ . '/auth.php';
