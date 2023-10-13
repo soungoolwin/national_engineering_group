@@ -5,7 +5,7 @@
     <AboutSection></AboutSection>
 
     <!-- portfolio section -->
-    <PortfolioSection :projects="projects" :isPage="false" />
+    <PortfolioSection :projects="projects" />
 
     <!-- service section -->
     <ServiceSection :services="services"></ServiceSection>

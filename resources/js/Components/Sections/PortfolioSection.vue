@@ -18,7 +18,7 @@
                                     />
                                     <div
                                         class="overlay"
-                                        @click="openModal = true"
+                                        @click="openModal(project.id)"
                                     >
                                         <p class="see-more">See More</p>
                                     </div>
@@ -42,33 +42,34 @@
                     </div>
                 </SplideSlide>
             </Splide>
-        </div>
-        <div class="modal-background" v-if="openModal">
-            <div class="modal-container">
-                <div class="modal-content">
-                    <h2>Project Photos</h2>
-                    <Splide
-                        :options="{ rewind: true }"
-                        aria-label="My Favorite Images"
-                    >
-                        <SplideSlide>
-                            <img
-                                src="../../../img/p1.jpg"
-                                alt="Sample 1"
-                                class="modalImage"
-                            />
-                        </SplideSlide>
-                        <SplideSlide>
-                            <img
-                                src="../../../img/p2.jpg"
-                                alt="Sample 2"
-                                class="modalImage"
-                            />
-                        </SplideSlide>
-                    </Splide>
-                    <button @click="openModal = false" class="btn btn-danger">
-                        Close
-                    </button>
+            <div class="modal-background" v-if="isModalOpen">
+                <div class="modal-container">
+                    <div class="modal-content">
+                        <Splide
+                            :options="{ rewind: true }"
+                            aria-label="My Favorite Images"
+                        >
+                            <SplideSlide
+                                v-for="image in images"
+                                :key="image.id"
+                            >
+                                <h2>Site Photos</h2>
+                                <div v-if="loading" class="spinner"></div>
+                                <img
+                                    :src="image.image_url"
+                                    alt="Sample 1"
+                                    class="modalImage"
+                                    @load="imageLoaded"
+                                />
+                            </SplideSlide>
+                        </Splide>
+                        <button
+                            @click="isModalOpen = false"
+                            class="btn btn-danger"
+                        >
+                            Close
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,7 +78,7 @@
 
 <script>
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
-import { computed, ref } from "vue";
+import { ref } from "vue";
 
 export default {
     props: ["projects"],
@@ -86,10 +87,30 @@ export default {
         SplideSlide,
     },
 
-    setup() {
-        let openModal = ref(false);
+    setup(props) {
+        let isModalOpen = ref(false);
+        let projects = ref(props.projects);
+        let images = ref([]);
+        const loading = ref(true);
+        const loadedImagesCount = ref(0);
+        let openModal = (projectId) => {
+            let project = projects.value.find(
+                (project) => project.id === projectId
+            );
+            if (project) {
+                images.value = project.images;
+                isModalOpen.value = true;
+                loadedImagesCount.value = 0;
+            }
+        };
+        const imageLoaded = () => {
+            loadedImagesCount.value++;
+            if (loadedImagesCount.value === images.value.length) {
+                loading.value = false;
+            }
+        };
 
-        return { openModal };
+        return { openModal, isModalOpen, images, loading, imageLoaded };
     },
 };
 </script>
@@ -180,5 +201,24 @@ export default {
 .modal-content {
     text-align: center;
     color: black;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 </style>

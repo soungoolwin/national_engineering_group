@@ -1,5 +1,5 @@
 <template>
-    <PortfolioSection :projects="projects" :isPage="true" />
+    <PortfolioSection :projects="projects" />
 </template>
 
 <script>

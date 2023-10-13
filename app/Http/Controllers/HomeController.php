@@ -12,7 +12,7 @@ class HomeController extends Controller
     public function index()
     {
         $services = Service::all();
-        $projects = Project::all();
+        $projects = Project::with('images')->get();
         return Inertia::render('Home', [
             'services' => $services,
             'projects' => $projects

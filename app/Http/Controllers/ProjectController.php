@@ -10,7 +10,8 @@ class ProjectController extends Controller
 {
     public function index()
     {
-        $projects = Project::all();
+        $projects = Project::with('images')->get();
+
         return Inertia::render('Projects', [
             'projects' => $projects
         ]);
