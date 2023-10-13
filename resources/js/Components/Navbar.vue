@@ -38,7 +38,7 @@
                 </div>
             </div>
         </div>
-        <div class="header_bottom">
+        <div class="header_bottom navBg">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container">
                     <a
@@ -104,4 +104,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.navBg {
+    background-color: #003471;
+}
+</style>
