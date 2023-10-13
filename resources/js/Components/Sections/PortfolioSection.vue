@@ -4,9 +4,19 @@
             <div class="heading_container heading_center">
                 <h2>Our Work Portfolio</h2>
             </div>
+            <div class="filterNav">
+                <FilterNav
+                    :categories="categories"
+                    @filteredValue="filteredValue"
+                    :currentSubNav="currentSubNav"
+                />
+            </div>
 
             <Splide :options="{ rewind: true }" aria-label="My Favorite Images">
-                <SplideSlide v-for="project in projects" :key="project.id">
+                <SplideSlide
+                    v-for="project in filteredProjects"
+                    :key="project.id"
+                >
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 text-center">
@@ -77,12 +87,14 @@
 </template>
 
 <script>
+import FilterNav from "../FilterNav.vue";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
-import { ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 
 export default {
-    props: ["projects"],
+    props: ["projects", "categories"],
     components: {
+        FilterNav,
         Splide,
         SplideSlide,
     },
@@ -93,6 +105,13 @@ export default {
         let images = ref([]);
         const loading = ref(true);
         const loadedImagesCount = ref(0);
+        let currentSubNav = ref("");
+
+        onMounted(() => {
+            if (props.categories.length > 0) {
+                currentSubNav.value = props.categories[0].id;
+            }
+        });
         let openModal = (projectId) => {
             let project = projects.value.find(
                 (project) => project.id === projectId
@@ -109,8 +128,25 @@ export default {
                 loading.value = false;
             }
         };
+        let filteredValue = (value) => {
+            currentSubNav.value = value;
+        };
+        const filteredProjects = computed(() => {
+            return projects.value.filter(
+                (project) => project.category.id === currentSubNav.value
+            );
+        });
 
-        return { openModal, isModalOpen, images, loading, imageLoaded };
+        return {
+            openModal,
+            isModalOpen,
+            images,
+            loading,
+            imageLoaded,
+            filteredValue,
+            filteredProjects,
+            currentSubNav,
+        };
     },
 };
 </script>
@@ -206,7 +242,7 @@ export default {
 .spinner {
     border: 4px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-    border-top: 4px solid #3498db;
+    border-top: 4px solid #003471;
     width: 40px;
     height: 40px;
     animation: spin 2s linear infinite;
@@ -220,5 +256,11 @@ export default {
     100% {
         transform: rotate(360deg);
     }
+}
+
+.filterNav {
+    width: 80%;
+    margin: auto;
+    text-align: center;
 }
 </style>

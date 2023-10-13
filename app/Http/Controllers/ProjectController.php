@@ -2,18 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Project;
-use Illuminate\Http\Request;
+
 use Inertia\Inertia;
 
 class ProjectController extends Controller
 {
     public function index()
     {
-        $projects = Project::with('images')->get();
+        $projects = Project::with('images', 'category')->get();
+        $categories = Category::all();
+
 
         return Inertia::render('Projects', [
-            'projects' => $projects
+            'projects' => $projects,
+            'categories' => $categories
         ]);
     }
 }

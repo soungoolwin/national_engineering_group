@@ -1,11 +1,11 @@
 <template>
-    <PortfolioSection :projects="projects" />
+    <PortfolioSection :projects="projects" :categories="categories" />
 </template>
 
 <script>
 import PortfolioSection from "../Components/Sections/PortfolioSection.vue";
 export default {
-    props: ["projects"],
+    props: ["projects", "categories"],
     components: { PortfolioSection },
 };
 </script>
