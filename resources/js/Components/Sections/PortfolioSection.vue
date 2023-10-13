@@ -6,13 +6,13 @@
             </div>
 
             <Splide :options="{ rewind: true }" aria-label="My Favorite Images">
-                <SplideSlide v-for="project in 4" :key="project.id">
+                <SplideSlide v-for="project in projects" :key="project.id">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 text-center">
                                 <div class="image-container">
                                     <img
-                                        src="../../../img/p1.jpg"
+                                        :src="project.image_url"
                                         alt="Sample 1"
                                         class="image"
                                     />
@@ -27,15 +27,15 @@
                             <div class="col-md-6 mt-5">
                                 <p class="text">
                                     <i class="fa-solid fa-location-dot mr-3"></i
-                                    >Bio Super Liquid Fertilizer Plant
+                                    >{{ project.name }}
                                 </p>
                                 <p>
                                     <i class="fa-regular fa-calendar mr-3"></i
-                                    >1999
+                                    >{{ project.completed_date }}
                                 </p>
                                 <p>
                                     <i class="fa-solid fa-angle-right mr-3"></i>
-                                    From detailed design to construction stage
+                                    {{ project.description }}
                                 </p>
                             </div>
                         </div>
@@ -80,10 +80,12 @@ import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import { ref } from "vue";
 
 export default {
+    props: ["projects"],
     components: {
         Splide,
         SplideSlide,
     },
+
     setup() {
         let openModal = ref(false);
 

@@ -39,7 +39,7 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
             'throw' => false,
         ],
@@ -54,6 +54,13 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
+        ],
+        'b2' => [
+            'driver'         => 'b2',
+            'accountId'      => '005da84bd841cf00000000002',
+            'applicationKey' => 'K005FidPDvvvGqxqO13miICuZcpRzOw',
+            'bucketName'     => 'National-Engineering-Group',
+            'bucketId'       => 'fd5a98742bad18e481bc0f10',
         ],
 
     ],

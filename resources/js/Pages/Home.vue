@@ -5,7 +5,7 @@
     <AboutSection></AboutSection>
 
     <!-- portfolio section -->
-    <PortfolioSection></PortfolioSection>
+    <PortfolioSection :projects="projects"></PortfolioSection>
 
     <!-- service section -->
     <ServiceSection :services="services"></ServiceSection>
@@ -34,7 +34,7 @@ export default {
         AboutSection,
         HeroSection,
     },
-    props: ["services"],
+    props: ["services", "projects"],
 };
 </script>
 
