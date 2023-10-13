@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -44,4 +45,6 @@ Route::get('/', [HomeController::class, 'index']);
 //FOR SERVICES PAGE
 Route::get('/services', [ServiceController::class, 'index']);
 
+//FOR PROJECTS PAGE
+Route::get('/projects', [ProjectController::class, 'index']);
 require __DIR__ . '/auth.php';

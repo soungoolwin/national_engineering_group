@@ -4,7 +4,7 @@
         <div class="header_top">
             <div class="container-fluid header_top_container">
                 <a class="navbar-brand" href="index.html"> NE<span>G</span> </a>
-                <Link href="/">Home</Link>
+
                 <div class="contact_nav">
                     <a href="https://maps.app.goo.gl/YiAyu4j8v5QdMFbJ8">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -77,8 +77,8 @@
                                 <a class="nav-link" href="about.html"> About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="portfolio.html"
-                                    >Portfolio</a
+                                <Link class="nav-link" href="/projects"
+                                    >Projects</Link
                                 >
                             </li>
                             <li class="nav-item">

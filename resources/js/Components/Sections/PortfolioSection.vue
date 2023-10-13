@@ -1,5 +1,5 @@
 <template>
-    <section class="portfolio_section">
+    <section class="portfolio_section py-5">
         <div class="container">
             <div class="heading_container heading_center">
                 <h2>Our Work Portfolio</h2>
@@ -77,7 +77,7 @@
 
 <script>
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 export default {
     props: ["projects"],
