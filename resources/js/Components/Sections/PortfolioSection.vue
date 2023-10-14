@@ -39,6 +39,7 @@
                                     <i class="fa-solid fa-location-dot mr-3"></i
                                     >{{ project.name }}
                                 </p>
+
                                 <p>
                                     <i class="fa-regular fa-calendar mr-3"></i
                                     >{{ project.completed_date }}

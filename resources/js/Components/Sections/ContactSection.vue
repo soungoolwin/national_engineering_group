@@ -1,4 +1,7 @@
 <template>
+    <div class="alert alert-success text-center" role="alert" v-if="showFlash">
+        {{ flashMessage }}
+    </div>
     <section class="contact_section my-5">
         <div class="container">
             <div class="heading_container heading_center">
@@ -7,13 +10,14 @@
             <div class="row">
                 <div class="col-md-6 px-0">
                     <div class="form_container">
-                        <form action="">
+                        <form @submit.prevent="submit()">
                             <div class="form-row">
                                 <div class="form-group col">
                                     <input
                                         type="text"
                                         class="form-control"
                                         placeholder="Your Name"
+                                        v-model="client_name"
                                     />
                                 </div>
                             </div>
@@ -23,6 +27,7 @@
                                         type="text"
                                         class="form-control"
                                         placeholder="Phone Number"
+                                        v-model="phone"
                                     />
                                 </div>
                                 <div class="form-group col-lg-6">
@@ -30,20 +35,26 @@
                                         name=""
                                         id=""
                                         class="form-control wide"
+                                        v-model="category"
                                     >
-                                        <option value="">Select Service</option>
-                                        <option value="">Service 1</option>
-                                        <option value="">Service 2</option>
-                                        <option value="">Service 3</option>
+                                        <option
+                                            :value="category.name"
+                                            v-for="category in categories"
+                                            :key="category.id"
+                                        >
+                                            {{ category.name }}
+                                        </option>
                                     </select>
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="form-group col">
                                     <input
                                         type="email"
                                         class="form-control"
                                         placeholder="Email"
+                                        v-model="email"
                                     />
                                 </div>
                             </div>
@@ -53,11 +64,12 @@
                                         type="text"
                                         class="message-box form-control"
                                         placeholder="Message"
+                                        v-model="message"
                                     />
                                 </div>
                             </div>
                             <div class="btn_box">
-                                <button>SEND</button>
+                                <button type="submit">SEND</button>
                             </div>
                         </form>
                     </div>
@@ -83,7 +95,73 @@
 </template>
 
 <script>
-export default {};
+import { router } from "@inertiajs/vue3";
+import { ref } from "vue";
+export default {
+    props: ["categories"],
+    setup(props) {
+        let client_name = ref("");
+        let phone = ref("");
+        let category = ref(props.categories[0].name);
+        let email = ref("");
+        let message = ref("");
+
+        // Flash message properties
+        let flashMessage = ref("We will contact you back ASAP!");
+        let showFlash = ref(false);
+
+        function submit() {
+            let form = {
+                client_name: client_name.value,
+                phone: phone.value,
+                project_category: category.value,
+                email: email.value,
+                message: message.value,
+            };
+
+            showFlash.value = true;
+            // Automatically hide the flash message after 3 seconds
+            setTimeout(() => {
+                showFlash.value = false;
+            }, 3000);
+            (client_name.value = ""),
+                (phone.value = ""),
+                (category.value = ""),
+                (email.value = ""),
+                (message.value = "");
+
+            router.post("/contact", form);
+        }
+
+        return {
+            client_name,
+            phone,
+            category,
+            email,
+            message,
+            submit,
+            flashMessage,
+            showFlash,
+        };
+    },
+};
 </script>
 
-<style></style>
+<style>
+.flash-message {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: none;
+}
+
+.flash-message.show {
+    display: block;
+}
+</style>

@@ -6,7 +6,7 @@
 
 (function (global, factory) {
     typeof exports === "object" && typeof module !== "undefined"
-        ? factory(exports, require("jquery"), require("popper.js"))
+        ? factory(exports, global.jQuery, global.Popper)
         : typeof define === "function" && define.amd
         ? define(["exports", "jquery", "popper.js"], factory)
         : ((global = global || self),

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
@@ -51,7 +52,6 @@ Route::get('/services', [ServiceController::class, 'index']);
 Route::get('/projects', [ProjectController::class, 'index']);
 
 //FOR CONTACT PAGE
-Route::get('/contact', function () {
-    return Inertia::render('Contact');
-});
+Route::get('/contact', [MessageController::class, 'index']);
+Route::post('/contact', [MessageController::class, 'store']);
 require __DIR__ . '/auth.php';

@@ -9,9 +9,6 @@
 
     <!-- service section -->
     <ServiceSection :services="services"></ServiceSection>
-
-    <!-- contact section -->
-    <ContactSection></ContactSection>
 </template>
 
 <script>

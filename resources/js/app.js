@@ -1,4 +1,5 @@
 import "@splidejs/vue-splide/css";
+
 import Layout from "../../resources/js/Layouts/Layout.vue";
 import "@splidejs/vue-splide/css/skyblue";
 import "@splidejs/vue-splide/css/sea-green";
