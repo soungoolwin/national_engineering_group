@@ -13,31 +13,25 @@
                             <div class="info_link-box">
                                 <h5>Useful Link</h5>
                                 <ul>
-                                    <li class="active">
-                                        <a class="" href="index.html"
-                                            >Home
-                                            <span class="sr-only"
-                                                >(current)</span
-                                            ></a
+                                    <li class="nav-item">
+                                        <Link class="nav-link" href="/"
+                                            >Home</Link
                                         >
                                     </li>
-                                    <li class="">
-                                        <a class="" href="about.html">About </a>
+                                    <li class="nav-item">
+                                        <Link class="nav-link" href="/services"
+                                            >Services</Link
+                                        >
                                     </li>
-                                    <li class="">
-                                        <a class="" href="service.html"
-                                            >Services
-                                        </a>
+                                    <li class="nav-item">
+                                        <Link class="nav-link" href="/projects"
+                                            >Projects</Link
+                                        >
                                     </li>
-                                    <li class="">
-                                        <a class="" href="portfolio.html">
-                                            Portfolio
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a class="" href="contact.html">
-                                            Contact
-                                        </a>
+                                    <li class="nav-item">
+                                        <Link class="nav-link" href="/contact"
+                                            >Contact Us</Link
+                                        >
                                     </li>
                                 </ul>
                             </div>
@@ -149,7 +143,13 @@
 </template>
 
 <script>
-export default {};
+import { Link } from "@inertiajs/vue3";
+
+export default {
+    components: {
+        Link,
+    },
+};
 </script>
 
 <style></style>

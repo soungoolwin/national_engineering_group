@@ -34,7 +34,7 @@ class ProjectResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name'),
-                RichEditor::make('description'),
+                Textarea::make('description'),
                 DateTimePicker::make('completed_date'),
                 Select::make('category_id')
                     ->label('Category')
