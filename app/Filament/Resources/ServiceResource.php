@@ -2,22 +2,23 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ImageResource\Pages;
-
-use App\Models\Image;
-use App\Models\Project;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TagsInput;
+use App\Filament\Resources\ServiceResource\Pages;
+use App\Filament\Resources\ServiceResource\RelationManagers;
+use App\Models\Service;
+use Filament\Forms;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ImageResource extends Resource
+class ServiceResource extends Resource
 {
-    protected static ?string $model = Image::class;
+    protected static ?string $model = Service::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -25,12 +26,9 @@ class ImageResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('image_url')
-                    ->label('Image Url'),
-                Select::make('project_id')
-                    ->label('Project')
-                    ->options(Project::all()->pluck('name', 'id'))
-                    ->searchable(),
+                TextInput::make('title'),
+                TextInput::make('description'),
+                Textarea::make('img_url')
             ]);
     }
 
@@ -38,8 +36,8 @@ class ImageResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('project.name'),
-                TextColumn::make('image_url'),
+                TextColumn::make('title'),
+                TextColumn::make('description')
             ])
             ->filters([
                 //
@@ -64,9 +62,9 @@ class ImageResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListImages::route('/'),
-            'create' => Pages\CreateImage::route('/create'),
-            'edit' => Pages\EditImage::route('/{record}/edit'),
+            'index' => Pages\ListServices::route('/'),
+            'create' => Pages\CreateService::route('/create'),
+            'edit' => Pages\EditService::route('/{record}/edit'),
         ];
     }
 }
