@@ -34,6 +34,7 @@ class ProjectResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name'),
+                Forms\Components\TextInput::make('location'),
                 Textarea::make('description'),
                 DateTimePicker::make('completed_date'),
                 Select::make('category_id')
@@ -50,6 +51,7 @@ class ProjectResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name'),
+                TextColumn::make('location'),
                 TextColumn::make('description'),
                 TextColumn::make('completed_date'),
 

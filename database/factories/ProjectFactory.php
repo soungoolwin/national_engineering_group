@@ -18,6 +18,7 @@ class ProjectFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'location' => fake()->name(),
             'completed_date' => fake()->date(),
             'description' => fake()->text(),
             'image_url' => 'test'

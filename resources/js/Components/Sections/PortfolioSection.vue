@@ -35,9 +35,12 @@
                                 </div>
                             </div>
                             <div class="col-md-6 mt-5">
+                                <h3 class="text mb-3">
+                                    {{ project.name }}
+                                </h3>
                                 <p class="text">
                                     <i class="fa-solid fa-location-dot mr-3"></i
-                                    >{{ project.name }}
+                                    >{{ project.location }}
                                 </p>
 
                                 <p>
