@@ -59,6 +59,7 @@
             <div class="modal-background" v-if="isModalOpen">
                 <div class="modal-container">
                     <div class="modal-content">
+                        <h2 class="mt-5">Site Photos</h2>
                         <Splide
                             :options="{ rewind: true }"
                             aria-label="My Favorite Images"
@@ -67,7 +68,6 @@
                                 v-for="image in images"
                                 :key="image.id"
                             >
-                                <h2>Site Photos</h2>
                                 <div v-if="loading" class="spinner"></div>
                                 <img
                                     :src="image.image_url"
@@ -163,6 +163,12 @@ export default {
     height: auto;
     margin: auto;
     transition: filter 0.3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+    .image {
+        width: 100%;
+        height: 100%;
+    }
 }
 .modalImage {
     widows: 70%;

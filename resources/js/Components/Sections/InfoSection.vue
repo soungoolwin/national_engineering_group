@@ -83,7 +83,7 @@
                 </div>
                 <div class="info_bottom">
                     <div class="row">
-                        <div class="col-lg-9">
+                        <div class="col-lg-12">
                             <div class="info_contact">
                                 <div class="row">
                                     <div class="col-md-3">
@@ -117,22 +117,6 @@
                                         </a>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="info_form">
-                                <form action="">
-                                    <input
-                                        type="email"
-                                        placeholder="Enter Your Email"
-                                    />
-                                    <button>
-                                        <i
-                                            class="fa fa-arrow-right"
-                                            aria-hidden="true"
-                                        ></i>
-                                    </button>
-                                </form>
                             </div>
                         </div>
                     </div>

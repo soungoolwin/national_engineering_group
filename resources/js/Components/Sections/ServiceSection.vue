@@ -37,15 +37,19 @@
                 </div>
             </div>
             <div class="btn-box">
-                <a href=""> Read More </a>
+                <Link href="/services">Read More</Link>
             </div>
         </div>
     </section>
 </template>
 
 <script>
+import { Link } from "@inertiajs/vue3";
 export default {
     props: ["services"],
+    components: {
+        Link,
+    },
     setup() {},
 };
 </script>
