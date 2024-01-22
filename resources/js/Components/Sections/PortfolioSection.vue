@@ -22,7 +22,7 @@
                             <div class="col-md-6 text-center">
                                 <div class="image-container">
                                     <img
-                                        :src="project.image_url"
+                                        src="https://f005.backblazeb2.com/file/National-Engineering-Group-/EPC+Projects/Lime2/lime2.jpeg"
                                         alt="Sample 1"
                                         class="image"
                                     />
