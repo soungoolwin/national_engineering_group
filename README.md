@@ -78,22 +78,6 @@ To work on the frontend, you can use the following commands:
     npm run prod
     ```
 
-### Backend
-
-For Laravel development, use the standard Artisan commands. For example:
-
--   Create a new controller:
-
-    ```bash
-    php artisan make:controller MyController
-    ```
-
--   Create a new model:
-
-    ```bash
-    php artisan make:model MyModel
-    ```
-
 ## Additional Information
 
 For more details on how Vue.js, Inertia.js, and Laravel work together, refer to their respective documentation:
